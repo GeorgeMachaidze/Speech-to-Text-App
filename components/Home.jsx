@@ -7,6 +7,7 @@ import BurgerMenuSVG from "../svg/BurgerMenuSVG";
 import PlusSVG from "../svg/PlusSVG";
 import OptionsSVG from "../svg/OptionsSVG";
 import MicrophoneSVG from "../svg/MicrophoneSVG";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
@@ -34,15 +35,13 @@ export default function Home() {
         <MicrophoneSVG />
         <MainText>დაიწყე ჩაწერა...</MainText>
       </MainSection>
+      <Footer />
     </MainView>
   );
 }
 const MainView = styled(SafeAreaView)`
   width: 100%;
   height: 100%;
-  flex: 1;
-  justify-content: flex-start;
-  align-items: stretch;
 `;
 const Header = styled.View`
   width: 100%;
