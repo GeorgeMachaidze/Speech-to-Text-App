@@ -6,6 +6,7 @@ import ArrowSVG from "../svg/ArrowsSVG";
 import BurgerMenuSVG from "../svg/BurgerMenuSVG";
 import PlusSVG from "../svg/PlusSVG";
 import OptionsSVG from "../svg/OptionsSVG";
+import MicrophoneSVG from "../svg/MicrophoneSVG";
 
 export default function Home() {
   return (
@@ -29,6 +30,10 @@ export default function Home() {
           <ButtonText style={{ color: "#23557d" }}>პარამეტრები</ButtonText>
         </OptionButton>
       </SecondSection>
+      <MainSection>
+        <MicrophoneSVG />
+        <MainText>დაიწყე ჩაწერა...</MainText>
+      </MainSection>
     </MainView>
   );
 }
@@ -90,4 +95,17 @@ const OptionButton = styled.Pressable`
   gap: 6px;
   width: 124px;
   border: 1px solid #23557d;
+`;
+const MainSection = styled.View`
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+  height: 495px;
+  gap: 6px;
+  padding: 0 20px;
+`;
+const MainText = styled.Text`
+  font-size: 16px;
+  font-weight: 200;
+  color: #000000;
 `;
