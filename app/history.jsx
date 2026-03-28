@@ -1,11 +1,14 @@
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Link } from "expo-router";
+import { ScrollView } from "react-native";
 
 import styled from "styled-components/native";
 import GoBackSVG from "../svg/GoBackSVG";
 import StarSVG from "../svg/StarSVG";
 import GeoFlagSVG from "../svg/GeoFlagSVG";
 import DownArrowSVG from "../svg/DownArrowSVG";
+import PencilSVG from "../svg/PencilSVG";
+import BinSVG from "../svg/BinSVG";
 
 export default function History() {
   return (
@@ -36,11 +39,117 @@ export default function History() {
         </HeaderSide>
       </Header>
 
-      <MainSection></MainSection>
+      <MainSection>
+        <DateSection>
+          <DateText>დღეს</DateText>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <DateText>გუშინ</DateText>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <DateText>11 მარტი</DateText>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <DateText>9 მარტი</DateText>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <DateText>7 მარტი</DateText>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <DateText>6 მარტი</DateText>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+          <ItemRectangle>
+            <PencilSVG />
+            <ItemText>
+              ტრანსკრიფციის სერვისი ხმას ტექსტად გარდაქმნის სწრაფად და მარტივად.
+              მომხმარებელს შეუძ...
+            </ItemText>
+            <BinSVG />
+          </ItemRectangle>
+        </DateSection>
+      </MainSection>
     </MainView>
   );
 }
 const MainView = styled(SafeAreaView)`
+  flex: 1;
   width: 100%;
   height: 100%;
 `;
@@ -108,11 +217,42 @@ const StatusText = styled.Text`
   font-weight: 400;
 `;
 
-const MainSection = styled.View`
-  flex-direction: row;
-  text-align: center;
+const MainSection = styled(ScrollView)`
+  flex: 1;
   width: 100%;
-  height: 495px;
-  gap: 6px;
+  height: auto;
+  gap: 22px;
   padding: 0 20px;
+  background-color: #d2d1d15e;
+`;
+
+const DateSection = styled.View`
+  padding: 6px 16px;
+  gap: 8px;
+`;
+
+const DateText = styled.Text`
+  font-size: 12px;
+  font-weight: 400;
+  color: #15151599;
+`;
+
+const ItemRectangle = styled.View`
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 344px;
+  height: 57px;
+  gap: 12px;
+  padding: 16px 14px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  border: 1px solid #2fa2fe;
+`;
+
+const ItemText = styled.Text`
+  font-size: 10px;
+  font-weight: 700;
+  max-width: 247px;
+  min-height: 26px;
 `;
