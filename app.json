@@ -3,6 +3,7 @@
     "name": "Speech-to-Text-App",
     "slug": "Speech-to-Text-App",
     "version": "1.0.0",
+    "scheme": "Speech-to-Text-App",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -24,6 +25,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": ["expo-router"]
   }
 }

@@ -1,5 +1,5 @@
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
-import { scale } from "react-native-size-matters";
+import { Link } from "expo-router";
 
 import styled from "styled-components/native";
 import ArrowSVG from "../svg/ArrowsSVG";
@@ -7,9 +7,9 @@ import BurgerMenuSVG from "../svg/BurgerMenuSVG";
 import PlusSVG from "../svg/PlusSVG";
 import OptionsSVG from "../svg/OptionsSVG";
 import MicrophoneSVG from "../svg/MicrophoneSVG";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
-export default function Home() {
+const Home = () => {
   return (
     <MainView>
       <Header>
@@ -18,7 +18,9 @@ export default function Home() {
           <ArrowSVG />
           <HeaderText>ტექსტი</HeaderText>
         </HeaderLeftSide>
-        <BurgerMenuSVG />
+        <Link href="/history">
+          <BurgerMenuSVG />
+        </Link>
       </Header>
       <HeaderUnderLine></HeaderUnderLine>
       <SecondSection>
@@ -38,7 +40,9 @@ export default function Home() {
       <Footer />
     </MainView>
   );
-}
+};
+
+export default Home;
 const MainView = styled(SafeAreaView)`
   width: 100%;
   height: 100%;
