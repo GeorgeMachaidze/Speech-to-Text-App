@@ -1,5 +1,6 @@
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { Link } from "expo-router";
+import { useState } from "react";
 
 import styled from "styled-components/native";
 import ArrowSVG from "../svg/ArrowsSVG";
@@ -8,8 +9,11 @@ import PlusSVG from "../svg/PlusSVG";
 import OptionsSVG from "../svg/OptionsSVG";
 import MicrophoneSVG from "../svg/MicrophoneSVG";
 import Footer from "../components/Footer";
+import Options from "../components/Options";
 
 const Home = () => {
+  const [showOptions, setShowOptions] = useState(false);
+
   return (
     <MainView>
       <Header>
@@ -22,22 +26,25 @@ const Home = () => {
           <BurgerMenuSVG />
         </Link>
       </Header>
-      <HeaderUnderLine></HeaderUnderLine>
+      <HeaderUnderLine />
       <SecondSection>
         <AddNewButton>
           <PlusSVG />
           <ButtonText>ახლის გახსნა</ButtonText>
         </AddNewButton>
-        <OptionButton>
+
+        <OptionButton onPress={() => setShowOptions(true)}>
           <OptionsSVG />
           <ButtonText style={{ color: "#23557d" }}>პარამეტრები</ButtonText>
         </OptionButton>
       </SecondSection>
+
       <MainSection>
         <MicrophoneSVG />
         <MainText>დაიწყე ჩაწერა...</MainText>
       </MainSection>
       <Footer />
+      {showOptions && <Options onClose={() => setShowOptions(false)} />}
     </MainView>
   );
 };
